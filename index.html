@@ -1,89 +1,75 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww12900\viewh9360\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catiasa.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column (Navigation) -->
+        <div class="left-column">
+            <h2 class="name"><a href="/">catiasa.com</a></h2>
+            <div class="nav-links">
+                <a href="/art">art</a>
+                <a href="/music">music</a>
+                <a href="/writing">writing</a>
+                <a href="/about">about</a>
+            </div>
+        </div>
+        
+        <!-- Right Column (Images with captions) -->
+        <div class="right-column">
+            <div class="media-item">
+                <img src="assets/art1.jpg" alt="Your artwork">
+            </div>
+            <div class="caption">
+                <p>Your artwork description goes here. Click to see more details about your creative work.</p>
+            </div>
+            
+            <a href="https://catiasa.bandcamp.com/album/da-barriga" target="_blank" class="bandcamp-link">
+                🎵 Listen on Bandcamp
+            </a>
+            
+            <!-- Music Section -->
+            <div class="music-section">
+                <h3 class="music-title">🎵 My Music</h3>
+                <div class="player-container">
+                    <iframe 
+                        style="border: 0; width: 350px; height: 787px;" 
+                        src="https://bandcamp.com/EmbeddedPlayer/album=2924040545/size=large/bgcol=ffffff/linkcol=0687f5/package=3588089395/transparent=true/" 
+                        seamless>
+                        <a href="https://catiasa.bandcamp.com/album/da-barriga">DA BARRIGA by Cátia Sá</a>
+                    </iframe>
+                    <iframe 
+                        style="border: 0; width: 350px; height: 152px;" 
+                        src="https://w.soundcloud.com/player/?url=https://soundcloud.com/catia_sa&amp;show_comments=true&amp;show_teaser=true&amp;show_playcount=true&amp;show_artwork=true&amp;color=0687f5&amp;auto_play=false">
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- Writing Section -->
+            <div class="writing-section">
+                <h3 class="writing-title">✍️ My Writing</h3>
+                <a href="https://editoraurutau.com/titulo/parir-montanhas" target="_blank" class="writing-link">
+                    Read "Parir Montanhas"
+                </a>
+            </div>
+        </div>
+    </div>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>catiasa.com</title>\
-    <link rel="stylesheet" href="styles.css">\
-</head>\
-<body>\
-    <div class="container">\
-        <!-- Left Column (Navigation) -->\
-        <div class="left-column">\
-            <h2 class="name"><a href="/">catiasa.com</a></h2>\
-            <div class="nav-links">\
-                <a href="/art">art</a>\
-                <a href="/music">music</a>\
-                <a href="/writing">writing</a>\
-                <a href="/about">about</a>\
-            </div>\
-        </div>\
-        \
-        <!-- Right Column (Images with captions) -->\
-        <div class="right-column">\
-            <div class="media-item">\
-                <img src="assets/art1.jpg" alt="Your artwork">\
-            </div>\
-            <div class="caption">\
-                <p>Your artwork description goes here. Click to see more details about your creative work.</p>\
-            </div>\
-            \
-            <a href="https://catiasa.bandcamp.com/album/da-barriga" target="_blank" class="bandcamp-link">\
-                
-\f1 \uc0\u55356 \u57269 
-\f0  Listen on Bandcamp\
-            </a>\
-            \
-            <!-- Music Section -->\
-            <div class="music-section">\
-                <h3 class="music-title">
-\f1 \uc0\u55356 \u57269 
-\f0  My Music</h3>\
-                <div class="player-container">\
-                    <iframe \
-                        style="border: 0; width: 350px; height: 787px;" \
-                        src="https://bandcamp.com/EmbeddedPlayer/album=2924040545/size=large/bgcol=ffffff/linkcol=0687f5/package=3588089395/transparent=true/" \
-                        seamless>\
-                        <a href="https://catiasa.bandcamp.com/album/da-barriga">DA BARRIGA by C\'e1tia S\'e1</a>\
-                    </iframe>\
-                    <iframe \
-                        style="border: 0; width: 350px; height: 152px;" \
-                        src="https://w.soundcloud.com/player/?url=https://soundcloud.com/catia_sa&amp;show_comments=true&amp;show_teaser=true&amp;show_playcount=true&amp;show_artwork=true&amp;color=0687f5&amp;auto_play=false">\
-                    </iframe>\
-                </div>\
-            </div>\
-            \
-            <!-- Writing Section -->\
-            <div class="writing-section">\
-                <h3 class="writing-title">
-\f1 \uc0\u9997 \u65039 
-\f0  My Writing</h3>\
-                <a href="https://editoraurutau.com/titulo/parir-montanhas" target="_blank" class="writing-link">\
-                    Read "Parir Montanhas"\
-                </a>\
-            </div>\
-        </div>\
-    </div>\
-\
-    <script>\
-        document.addEventListener('DOMContentLoaded', () => \{\
-            // Toggle full caption visibility on click\
-            const mediaItems = document.querySelectorAll('.media-item');\
-            mediaItems.forEach(item => \{\
-                item.addEventListener('click', () => \{\
-                    const caption = item.nextElementSibling;\
-                    caption.classList.toggle('visible');\
-                \});\
-            \});\
-        \});\
-    </script>\
-</body>\
-</html>\
-}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Toggle full caption visibility on click
+            const mediaItems = document.querySelectorAll('.media-item');
+            mediaItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const caption = item.nextElementSibling;
+                    caption.classList.toggle('visible');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
