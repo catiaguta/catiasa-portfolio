@@ -26,8 +26,8 @@ body {
 
 .container {
     display: flex;
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;       /* Centraliza verticalmente */
+    justify-content: center; 
+    align-items: center;       
     min-height: 100vh;
     position: relative;
 }
