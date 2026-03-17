@@ -50,7 +50,7 @@ body {
     font-weight: bold;
     letter-spacing: 3px;
     margin-bottom: 40px;
-    color: #ff00cc;
+    color:  #ff00ff;
     text-shadow: 3px 3px 0px #00ffcc;
     animation: textRotate 5s ease-in-out infinite;
 }
