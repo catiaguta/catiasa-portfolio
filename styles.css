@@ -82,11 +82,12 @@ body {
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
+    font-family: monospace;
     letter-spacing: 2px;
     transition: all 0.3s;
     padding: 10px;
     background: rgba(255, 0, 204, 0.2);
-    border: 2px solid #ff00cc;
+    border: 2px solid ;
     animation: navPulse 2s ease-in-out infinite;
 }
 
