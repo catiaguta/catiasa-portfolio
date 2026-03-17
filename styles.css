@@ -61,7 +61,7 @@ body {
 }
 
 .name a {
-    color: #fff;
+    color:  #ff00ff;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 .nav-links a {
-    color: #fff;
+    color:  #ff00ff;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
