@@ -1,25 +1,25 @@
 .nav-links a {
-    color: #ff00ff;  /* Mude de #fff para #ff00ff */
+    color: #ff00ff; 
 }
 
 .bandcamp-link {
-    background: #ff00ff;  /* Mude de #1db954 para #ff00ff */
+    background: #ff00ff; 
     color: #fff;
     border: 4px solid #fff;
 }
 
 .bandcamp-link:hover {
-    background: #ff00ff;  /* Mude de #1ed760 para #ff00ff */
+    background: #ff00ff;  
     box-shadow: 15px 15px 0px #ff00ff;
 }
 
 .writing-link {
-    background: #ff00ff;  /* Mude de #f39c12 para #ff00ff */
+    background: #ff00ff; 
     color: #fff;
     border: 4px solid #ff00cc;
 }
 
 .writing-link:hover {
-    background: #ff00ff;  /* Mude de #e67e22 para #ff00ff */
+    background: #ff00ff; 
     box-shadow: -15px -15px 0px #ff00ff;
 }
