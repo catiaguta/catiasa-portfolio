@@ -25,12 +25,25 @@ body {
 /* TEXTO */
 .text {
     position: absolute;
-    font-size: 28px;
+    font-size: 12px;
 }
 
 /* posições caóticas */
 .t1 { top: 10%; left: 10%; transform: rotate(0deg); }
 .t2 { top: 70%; left: 60%; transform: rotate(0deg); }
+    .t2 {
+    top: 70%;
+    left: 60%;
+    transform: rotate(8deg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* quando estiver ativo */
+.t2.visible {
+    opacity: 1;
+}
 .t3 { top: 40%; left: 30%; transform: rotate(0deg); }
 
 /* LINKS */
@@ -71,14 +84,21 @@ cores e os números, curiosa amadora do absurdo, de lupa no lixo e no luxo. Na
 inconsciente se ri.
 Nasceu e vive em Lisboa.
 </div>
-    <div class="text t3">fragmento perdido</div>
+    <div class="text t3"></div>
 
-    <a class="l1" href="#">about</a>
+    <a class="l1" href="#" id="aboutLink">about</a>
     <a class="l2" href="#">music</a>
 
     <img class="img1" src="Screenshot 2026-03-16 at 18.27.42.png">
 
 </div>
+<script>
+document.getElementById("aboutLink").addEventListener("click", function(e) {
+    e.preventDefault();
 
+    const text = document.querySelector(".t2");
+    text.classList.toggle("visible");
+});
+</script>
 </body>
 </html>
