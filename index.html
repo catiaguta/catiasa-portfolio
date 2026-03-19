@@ -7,10 +7,13 @@
 <meta charset="UTF-8">
 
 <style>
-body {
+body 
+    mix-blend-mode: lighten;
+
     margin: 0;
     font-family: "Courier New", monospace;
-    background: black;
+    background: url("mar.mov") repeat center center fixed;
+    background size: cover
     color: #ff00ff;
     height: 100vh;
     overflow: hidden;
@@ -25,7 +28,7 @@ body {
 /* TEXTO */
 .text {
     position: absolute;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 /* posições caóticas */
@@ -34,7 +37,7 @@ body {
     .t2 {
     top: 70%;
     left: 60%;
-    transform: rotate(8deg);
+    transform: rotate(0deg);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
