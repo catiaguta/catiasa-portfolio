@@ -5,53 +5,82 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 * \{\
-    margin: 0;\
-    padding: 0;\
-    box-sizing: border-box;\
-\}\
-\
-body \{\
+\f0\fs24 \cf0 body \{\
     font-family: "Courier New", monospace;\
     background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ff6600);\
     background-size: 400% 400%;\
     animation: gradientBG 15s ease infinite;\
     color: #ff00ff;\
     min-height: 100vh;\
-    display: flex;\
-    justify-content: center;\
-    align-items: center;\
+    overflow: hidden;\
 \}\
 \
-/* CENTRAR TUDO */\
+/* container ocupa tudo */\
 .container \{\
-    display: flex;\
-    flex-direction: column;\
-    align-items: center;\
-    gap: 20px; /* espa\'e7o entre elementos */\
-    text-align: center;\
+    position: relative;\
+    width: 100%;\
+    height: 100vh;\
+\}\
+\
+/* TEXTO SOLTO */\
+.text \{\
+    position: absolute;\
+    font-size: 18px;\
+\}\
+\
+/* posi\'e7\'f5es (podes mudar \'e0 vontade) */\
+.t1 \{\
+    top: 20%;\
+    left: 10%;\
+\}\
+\
+.t2 \{\
+    top: 60%;\
+    left: 70%;\
+\}\
+\
+.t3 \{\
+    top: 40%;\
+    left: 30%;\
 \}\
 \
 /* LINKS */\
 a \{\
     color: #ff00ff;\
-    text-decoration: none;\
+    position: absolute;\
 \}\
 \
-a:hover \{\
-    text-decoration: underline;\
+/* nav espalhado */\
+.nav-links a:nth-child(1) \{\
+    top: 10%;\
+    left: 80%;\
 \}\
 \
-/* TEXTAREA */\
-textarea \{\
-    font-family: "Courier New", monospace;\
-    color: #ff00ff;\
-    background: transparent;\
-    border: 1px solid #ff00ff;\
-    padding: 10px;\
+.nav-links a:nth-child(2) \{\
+    top: 50%;\
+    left: 5%;\
 \}\
 \
-/* anima\'e7\'e3o fundo */\
+.nav-links a:nth-child(3) \{\
+    top: 80%;\
+    left: 60%;\
+\}\
+\
+/* imagem solta */\
+.img1 \{\
+    position: absolute;\
+    top: 30%;\
+    left: 50%;\
+    width: 250px;\
+\}\
+\
+/* link livro */\
+.link1 \{\
+    top: 75%;\
+    left: 20%;\
+\}\
+\
+/* anima\'e7\'e3o */\
 @keyframes gradientBG \{\
     0% \{ background-position: 0% 50%; \}\
     50% \{ background-position: 100% 50%; \}\
