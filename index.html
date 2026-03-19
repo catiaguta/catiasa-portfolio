@@ -1,21 +1,13 @@
-<body style="background: #fff2cc;">
-<h1>cátia sá</h1>
-</body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 
 <style>
-body 
-    mix-blend-mode: lighten;
-
+body {
     margin: 0;
     font-family: "Courier New", monospace;
-    background: height="354" width="600" frameborder="0" scrolling="yes" ></iframe>
-
-) repeat center center fixed;
-    background size: cover
+    background: #fff2cc;
     color: #ff00ff;
     height: 100vh;
     overflow: hidden;
@@ -26,68 +18,46 @@ body
     width: 100%;
     height: 100%;
 }
-.player {
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    transform: rotate(5deg) scale(0.9);
-    transition: all 0.6s ease;
-}
 
-/* escondido */
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* visível */
-.show {
-    opacity: 1;
-    transform: rotate(5deg) scale(1);
-}
 /* TEXTO */
 .text {
-    font-family: "Courier New", monospace;
     position: absolute;
     font-size: 18px;
 }
 
-/* posições caóticas */
-.t1 { top: 20%; left: 10%; transform: rotate(0deg); }
-.t2 { top: 10%; left: 10%; transform: rotate(0deg); }
-    .t2 {
-    top: 70%;
-    left: 60%;
-    transform: rotate(0deg);
+.t2 {
+    top: 20%;
+    left: 10%;
     opacity: 0;
-    pointer-events: none;
     transition: opacity 0.5s ease;
 }
 
-/* quando estiver ativo */
 .t2.visible {
     opacity: 1;
 }
-.t3 { top: 30%; left: 10%; transform: rotate(0deg); }
 
 /* LINKS */
 a {
     color: #ff00ff;
     position: absolute;
     text-decoration: none;
-    font-family: "Courier New", monospace;
-    font-size: 18px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* links espalhados */
 .l1 { top: 30%; left: 10%; }
 .l2 { top: 35%; left: 10%; }
 .l3 { top: 40%; left: 10%; }
 
+/* PLAYER */
+.player {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.player.show {
+    opacity: 1;
 }
 </style>
 
@@ -97,35 +67,42 @@ a:hover {
 
 <div class="container">
 
-    <div class="text t1"></div>
-    <div class="text t2">escrita, a música e multimedia. <p></p>curiosa pelo absurdo, de lupa no lixo e no luxo. <p></p>entre os espectros, das células 
-        aos planetas, a brincar - onde o
-inconsciente se ri.
-<p></p>nasceu e vive em Lisboa.
-</div>
-    <div class="text t3"></div>
+    <!-- TEXTO ESCONDIDO -->
+    <div class="text t2">
+        escrita, música e multimedia.<br><br>
+        curiosa pelo absurdo, de lupa no lixo e no luxo.<br><br>
+        entre os espectros.<br><br> nasceu e vive em Lisboa.
+    </div>
 
+    <!-- LINKS -->
     <a class="l1" href="#" id="aboutLink">about</a>
-    <a class="l2" <a href="#" class="trigger" data-target="musicPlayer">music</a>
-    <a class="l3" href="#" id="writingLink">writing</a>
+    <a class="l2" href="#" id="musicLink">music</a>
+    <a class="l3" href="#">writing</a>
 
-    <img class="img1" src=>
+    <!-- PLAYER -->
+    <div class="player" id="musicPlayer">
+        <iframe 
+            style="border: 0; width: 350px; height: 787px;" 
+            src="https://bandcamp.com/EmbeddedPlayer/album=2924040545/size=large/bgcol=ffffff/linkcol=de270f/package=3588089395/transparent=true/" 
+            seamless>
+        </iframe>
+    </div>
 
 </div>
-    <div class="player musicPlayer hidden">
-    <iframe 
-        style="border: 0; width: 350px; height: 787px;" 
-        src="<iframe style="border: 0; width: 350px; height: 787px;" src="https://bandcamp.com/EmbeddedPlayer/album=2924040545/size=large/bgcol=ffffff/linkcol=de270f/package=3588089395/transparent=true/" seamless><a href="https://catiasa.bandcamp.com/album/da-barriga">DA BARRIGA by Cátia Sá</a></iframe>" 
-        seamless>
-    </iframe>
-</div>
+
 <script>
+// ABOUT
 document.getElementById("aboutLink").addEventListener("click", function(e) {
     e.preventDefault();
+    document.querySelector(".t2").classList.toggle("visible");
+});
 
-    const text = document.querySelector(".t2");
-    text.classList.toggle("visible");
+// MUSIC
+document.getElementById("musicLink").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("musicPlayer").classList.toggle("show");
 });
 </script>
+
 </body>
 </html>
