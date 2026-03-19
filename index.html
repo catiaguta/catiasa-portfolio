@@ -1,3 +1,79 @@
 <body style="background: red;">
-<h1>TESTE</h1>
+<h1>cátia sá</h1>
 </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background: black;
+    color: #ff00ff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* TEXTO */
+.text {
+    position: absolute;
+    font-size: 28px;
+}
+
+/* posições caóticas */
+.t1 { top: 10%; left: 10%; transform: rotate(-5deg); }
+.t2 { top: 70%; left: 60%; transform: rotate(8deg); }
+.t3 { top: 40%; left: 30%; transform: rotate(-2deg); }
+
+/* LINKS */
+a {
+    color: #ff00ff;
+    position: absolute;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* links espalhados */
+.l1 { top: 20%; left: 80%; }
+.l2 { top: 80%; left: 10%; }
+
+/* imagem */
+.img1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 250px;
+    transform: rotate(3deg);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="text t1">cátia sá</div>
+    <div class="text t2">write here</div>
+    <div class="text t3">fragmento perdido</div>
+
+    <a class="l1" href="#">about</a>
+    <a class="l2" href="#">music</a>
+
+    <img class="img1" src="Screenshot 2026-03-16 at 18.27.42.png">
+
+</div>
+
+</body>
+</html>
