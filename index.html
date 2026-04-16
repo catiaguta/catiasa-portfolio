@@ -11,21 +11,21 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: Arial, Helvetica, sans-serif; background: #fff; color: #000; font-size: 13px; line-height: 1.5; }
     :root { --gubi: #8a9a3a; }
-    header { padding: 1rem 1.2rem 0.5rem; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    header { padding: 1rem 2rem 0.5rem; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
     .site-name { font-size: 16px; font-weight: normal; cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em; }
-    nav a { font-size: 11px; color: #000; text-decoration: none; cursor: pointer; letter-spacing: 0.03em; }
+    nav a { font-size: 13px; color: #000; text-decoration: none; cursor: pointer; letter-spacing: 0.03em; }
     nav a:hover, nav a.active { color: var(--gubi); }
     .page { display: none; flex: 1; flex-direction: column; }
     .page.active { display: flex; }
-    .home { flex: 1; display: grid; grid-template-columns: 160px 1fr; }
+    .home { flex: 1; display: grid; grid-template-columns: 180px 1fr; }
     .home-sidebar { padding: 1rem 0; display: flex; flex-direction: column; gap: 0.4rem; }
-    .area-link { padding: 0.3rem 1.2rem; font-size: 16px; color: #000; cursor: pointer; }
+    .area-link { padding: 0.3rem 2rem; font-size: 16px; color: #000; cursor: pointer; }
     .area-link:hover { color: var(--gubi); }
-    .home-image { display: flex; align-items: flex-start; justify-content: flex-end; padding: 1rem; }
-    .home-image img { max-width: 380px; width: 100%; height: auto; display: block; }
-    .work-layout { flex: 1; display: grid; grid-template-columns: 160px 1fr; min-height: 60vh; }
+    .home-image { display: flex; align-items: flex-start; justify-content: center; padding: 1rem; }
+    .home-image img { max-width: 480px; width: 100%; height: auto; display: block; }
+    .work-layout { flex: 1; display: grid; grid-template-columns: 180px 1fr; min-height: 60vh; }
     .work-sidebar { padding: 1rem 0; display: flex; flex-direction: column; gap: 0.4rem; }
-    .work-sidebar a { padding: 0.3rem 1.2rem; font-size: 16px; color: #000; text-decoration: none; display: block; cursor: pointer; }
+    .work-sidebar a { padding: 0.3rem 2rem; font-size: 16px; color: #000; text-decoration: none; display: block; cursor: pointer; }
     .work-sidebar a:hover { color: var(--gubi); }
     .work-sidebar a.active { color: var(--gubi); font-weight: bold; }
     .music-content { padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; gap: 2rem; width: 100%; }
@@ -48,6 +48,15 @@
     .book-excerpt { font-size: 12px; line-height: 1.6; color: #555; margin-top: 0.3rem; }
     .book-link { margin-top: 0.3rem; font-size: 11px; color: var(--gubi); text-decoration: none; }
     .book-link:hover { text-decoration: underline; }
+    .multimedia-content { padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; width: 100%; }
+    .video-wrap { width: 100%; max-width: 640px; }
+    .video-wrap video { width: 100%; display: block; }
+    .video-description { max-width: 640px; width: 100%; }
+    .video-description p { font-size: 12px; color: #555; line-height: 1.7; margin-bottom: 0.8rem; }
+    .video-links { display: flex; flex-direction: column; gap: 0.3rem; }
+    .video-links a { font-size: 11px; color: var(--gubi); text-decoration: none; }
+    .video-links a:hover { text-decoration: underline; }
+    .festival-label { font-size: 11px; color: #aaa; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.06em; display: block; }
     .empty-note { font-size: 12px; color: #aaa; text-align: center; }
     .work-content { padding: 2rem; display: flex; flex-direction: column; align-items: center; }
     .contacto-content { padding: 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
@@ -69,7 +78,7 @@
     <div class="home-sidebar">
       <div class="area-link" onclick="showPage('musica')">música</div>
       <div class="area-link" onclick="showPage('escrita')">escrita</div>
-      <div class="area-link" onclick="showPage('work'); showDisc('multimedia')">multimedia</div>
+      <div class="area-link" onclick="showPage('multimedia')">multimedia</div>
       <div class="area-link" onclick="showPage('work'); showDisc('guxxi')">guxxi</div>
     </div>
     <div class="home-image">
@@ -83,7 +92,7 @@
     <div class="work-sidebar">
       <a onclick="showPage('musica')" class="active">música</a>
       <a onclick="showPage('escrita')">escrita</a>
-      <a onclick="showPage('work'); showDisc('multimedia')">multimedia</a>
+      <a onclick="showPage('multimedia')">multimedia</a>
       <a onclick="showPage('work'); showDisc('guxxi')">guxxi</a>
     </div>
     <div class="music-content">
@@ -127,7 +136,7 @@
     <div class="work-sidebar">
       <a onclick="showPage('musica')">música</a>
       <a onclick="showPage('escrita')" class="active">escrita</a>
-      <a onclick="showPage('work'); showDisc('multimedia')">multimedia</a>
+      <a onclick="showPage('multimedia')">multimedia</a>
       <a onclick="showPage('work'); showDisc('guxxi')">guxxi</a>
     </div>
     <div class="escrita-content">
@@ -148,12 +157,40 @@
   </div>
 </div>
 
+<div class="page" id="page-multimedia">
+  <div class="work-layout">
+    <div class="work-sidebar">
+      <a onclick="showPage('musica')">música</a>
+      <a onclick="showPage('escrita')">escrita</a>
+      <a onclick="showPage('multimedia')" class="active">multimedia</a>
+      <a onclick="showPage('work'); showDisc('guxxi')">guxxi</a>
+    </div>
+    <div class="multimedia-content">
+      <div class="video-wrap">
+        <!-- coloca o ficheiro de vídeo na mesma pasta que este HTML e chama-lhe cyborg-scooter.mp4
+             ou actualiza o src com o caminho correcto no teu servidor -->
+        <video controls>
+          <source src="cyborg-scooter.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-description">
+        <p>short film into the life and legacy of an e-scooter that was abandoned and reclaimed by the sea only to be rediscovered as a symbol of technological intrusion and environmental adaptation. created with erica jewell and so kanno.</p>
+        <div class="video-links">
+          <span class="festival-label">Art Meets Radical Openness, 2024</span>
+          <a href="https://radical-openness.org/en/programm/2024/cyborg-scooter" target="_blank">cyborg scooter — programme</a>
+          <a href="https://radical-openness.org/en/contributor/cyborg-scooter-group-catia-sa-erica-jewell-so-kanno" target="_blank">cyborg scooter group — contributors</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="page" id="page-work">
   <div class="work-layout">
     <div class="work-sidebar">
       <a onclick="showPage('musica')">música</a>
       <a onclick="showPage('escrita')">escrita</a>
-      <a id="tab-multimedia" onclick="showDisc('multimedia')">multimedia</a>
+      <a onclick="showPage('multimedia')">multimedia</a>
       <a id="tab-guxxi" onclick="showDisc('guxxi')">guxxi</a>
     </div>
     <div class="work-content">
@@ -171,7 +208,7 @@
 
 <script async src="//www.instagram.com/embed.js"></script>
 <script>
-  const works = { multimedia: [], guxxi: [] };
+  const works = { guxxi: [] };
 
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
