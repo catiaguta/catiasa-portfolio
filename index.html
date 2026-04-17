@@ -24,8 +24,8 @@
     .home-image img { max-width: 480px; width: 100%; height: auto; display: block; }
     .home-escreve { margin-left: -8cm; padding: 0.3rem 1rem; font-size: 13px; color: #000; cursor: pointer; letter-spacing: 0.03em; }
     .home-escreve:hover { color: var(--gubi); }
-    .work-layout { flex: 1; display: grid; grid-template-columns: 180px 1fr; min-height: 60vh; }
-    .work-sidebar { padding-top: 1.5cm; padding-left: 3cm; display: flex; flex-direction: column; gap: 0.4rem; }
+    .work-layout { flex: 1; display: grid; grid-template-columns: 180px 1fr; min-height: 60vh; align-items: start; }
+    .work-sidebar { padding-top: 1.5cm; padding-left: 3cm; display: flex; flex-direction: column; gap: 0.4rem; position: sticky; top: 0; align-self: start; max-height: 100vh; overflow: hidden; }
     .work-sidebar a { font-size: 16px; color: #000; text-decoration: none; display: block; cursor: pointer; padding: 0.3rem 0; }
     .work-sidebar a:hover { color: var(--gubi); }
     .work-sidebar a.active { color: var(--gubi); font-weight: bold; }
@@ -63,6 +63,19 @@
     .contacto-content { padding: 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
     .contacto-content a { font-size: 13px; color: var(--gubi); text-decoration: none; }
     .contacto-content a:hover { text-decoration: underline; }
+      @media (max-width: 680px) {
+      header { padding-top: 1.5rem; padding-left: 1.2rem; }
+      .home { grid-template-columns: 1fr; }
+      .home-sidebar { padding-left: 1.2rem; padding-top: 1rem; flex-direction: row; flex-wrap: wrap; gap: 0.3rem 1rem; }
+      .home-image { margin-top: 2rem; margin-left: 0; padding: 1rem 1.2rem; }
+      .home-image img { max-width: 100%; }
+      .home-escreve { margin-left: 0; padding: 0.3rem 1.2rem; }
+      .work-layout { grid-template-columns: 1fr; }
+      .work-sidebar { position: relative; top: auto; max-height: none; overflow: visible; padding-left: 1.2rem; padding-top: 1rem; flex-direction: row; flex-wrap: wrap; gap: 0.3rem 1rem; }
+      .sidebar-gubi-crop { display: none; }
+      .music-item iframe { width: 100% !important; max-width: 100%; height: auto; }
+      .video-wrap iframe { height: 220px; }
+    }
   </style>
 </head>
 <body>
